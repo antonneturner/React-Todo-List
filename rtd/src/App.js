@@ -33,6 +33,9 @@ function App() {
         break;
     }
   };
+
+  // Return
+
   return (
     <div className="App">
       <header>

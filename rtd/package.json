@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/antonneturner/React-Todo-List",
+  "homepage": "https://antonneturner.github.io/React-Todo-List/",
   "name": "rtd",
   "version": "0.1.0",
   "private": true,
@@ -40,3 +40,4 @@
     ]
   }
 }
+
