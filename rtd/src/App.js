@@ -8,17 +8,16 @@ import TodoList from "./componets/TodoList";
 
 function App() {
   // States
+  const [inputText, setInputText] = useState("");
+  const [todos, setTodos] = useState([]);
+  const [status, setStatus] = useState(["all"]);
+  const [filteredTodos, setFilteredTodos] = useState([]);
 
   // Use Effect
 
   useEffect(() => {
     filterHandler();
   }, [todos, status]);
-
-  const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState(["all"]);
-  const [filteredTodos, setFilteredTodos] = useState([]);
 
   // Functions
   const filterHandler = () => {
@@ -46,7 +45,11 @@ function App() {
         setInputText={setInputText}
         setStatus={setStatus}
       />
-      <TodoList setTodos={setTodos} todos={todos} />
+      <TodoList
+        setTodos={setTodos}
+        todos={todos}
+        filteredTodos={filteredTodos}
+      />
     </div>
   );
 }
